@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
 using System.Text;
@@ -23,8 +24,17 @@ namespace PR_11_ex._9
         +  Point p – вычисляется расстояние до точки p. Результатом должно быть вещественное число. 
         + целое число (лево- и право- сторонние операции). Увеличивается координата х, результатом является объект типа Point*/
         //Параметры
-        public double x;
-        public double y;
+        private double x;
+        private double y;
+
+        public double X
+        {
+            get { return x; }
+        }
+        public double Y
+        {
+            get { return y; }
+        }
         
         //Конструктор
         public Point(double x, double y)
