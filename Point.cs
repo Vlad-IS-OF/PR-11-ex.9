@@ -5,6 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace PR_11_ex._9
 {
@@ -40,8 +41,7 @@ namespace PR_11_ex._9
         //Деконструктор
         ~Point()
         {
-            this.x = 0;
-            this.y = 0;
+            Console.WriteLine($"Point [{this.x};{this.y}] has deleted");
         }
 
         //Функции
