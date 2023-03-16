@@ -37,21 +37,27 @@ namespace PR_11_ex._9
             this.x = 0;
             this.y = 0;
         }
+
+        public Point(Point p)
+        {
+            this.x = p.x;  
+            this.y = p.y;
+        }
         
-        //Деконструктор
-        ~Point()
+        //Деструктор (Лучше не использовать)
+        /*~Point()
         {
             Console.WriteLine($"Point [{this.x};{this.y}] has deleted");
-        }
+        }*/
 
         //Функции
         public double length(Point tochka2)
         {
-            return Math.Abs(Math.Sqrt((tochka2.x-this.x)+(tochka2.y-this.y)));
+            return Math.Sqrt(Math.Pow((tochka2.x - this.x), 2) + Math.Pow((tochka2.y - this.y), 2));
         }
         public double length(double x, double y)
         {
-            return Math.Abs(Math.Sqrt((x-this.x)+(y-this.y)));
+            return Math.Sqrt(Math.Pow((x-this.x),2) + Math.Pow((y-this.y),2));
         }
         public void Show()
         {
