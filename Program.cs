@@ -57,6 +57,7 @@ namespace PR_11_ex._9
             switch (chois)
             {
                 case 0:
+                    PointArray arr = new PointArray(2);
                     return;
                 case 1:
                     Console.WriteLine($"Координаты точки A до изменений (A++): {A.toString()}");
